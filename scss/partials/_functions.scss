@@ -1,0 +1,8 @@
+// functions
+
+// convert pixel value to em value
+// usage -
+// h1 {font-size: em(18); /* 18px */ } // OUTPUT: h1 { font-size: 1.125em; }
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}

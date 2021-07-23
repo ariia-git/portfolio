@@ -1,0 +1,12 @@
+// all global variables
+
+// default font size for px to em conversion
+$browser-context: 16;
+
+// map of breakpoint sizes
+$breakpoints: (
+        sm: 36em,
+        md: 48em,
+        lg: 62em,
+        xl: 75em,
+);
