@@ -17,3 +17,19 @@
     @warn 'Invalid breakpoint: #{$breakpoint}.';
   }
 }
+
+// generate font and colour custom properties from font stack sizes
+:root {
+  @each $font-size, $value in $type-scale {
+    --fs-#{$font-size}: #{$value};
+  }
+
+}
+// generate font utility classes from font stack sizes
+@each $font-size, $value in $type-scale {
+  .text-#{$font-size} {
+    font-size: $value;
+  }
+}
+
+

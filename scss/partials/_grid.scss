@@ -1,0 +1,26 @@
+/* grid system */
+
+// create a flex container
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// set columns to 100% and stacked
+[class^=col-] {
+  flex-basis: 100%;
+}
+// create columns from 1 to the number of $grid-columns above md breakpoint
+@include mq(md) {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      // set flex shrink and grow to 0 and dynamically set flex basis to
+      // 100% / (number of columns / iteration)
+      flex: 0 0 (100% / ($grid-columns / $i));
+    }
+    //create column offsets
+    .col-offset-#{$i} {
+      margin-left: 100% / ($grid-columns / $i);
+    }
+  }
+}

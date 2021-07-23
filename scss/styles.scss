@@ -1,10 +1,11 @@
 // import base styles
 @import
+  "partials/reset",
   "partials/variables",
   "partials/functions",
   "partials/mixins",
-  "partials/reset",
   "partials/typography",
+  "partials/grid",
   "partials/colors",
   "partials/utilities";
 // import styles for pages

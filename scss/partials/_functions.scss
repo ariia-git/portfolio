@@ -6,3 +6,7 @@
 @function em($pixels, $context: $browser-context) {
   @return #{$pixels/$context}em;
 }
+// get colour value from $colours map
+@function c($name) {
+  @return map-get($colours, $name)
+}
