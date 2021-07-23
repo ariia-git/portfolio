@@ -1,0 +1,14 @@
+// import base styles
+@import
+  "partials/variables",
+  "partials/functions",
+  "partials/mixins",
+  "partials/reset",
+  "partials/typography",
+  "partials/colors",
+  "partials/utilities";
+// import styles for pages
+@import "partials/pages/all";
+
+//import styles for sections
+@import "partials/sections/all";
