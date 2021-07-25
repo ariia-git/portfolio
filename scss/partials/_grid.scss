@@ -43,7 +43,7 @@
         flex: 1 1 math.div(100%, math.div($grid-columns, $i));
       }
       //create column offsets
-      .md:\col-offset-#{$i} {
+      .md\:col-offset-#{$i} {
         margin-left: math.div(100%,  math.div($grid-columns , $i));
       }
     }
