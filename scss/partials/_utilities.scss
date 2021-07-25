@@ -1,1 +1,20 @@
 // utility classes
+.container {
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  @include mq(sm) {
+    max-width: 34em;
+  }
+  @include mq(md) {
+    max-width: em(750);
+  }
+  @include mq(lg) {
+    max-width: em(970);
+  }
+  @include mq(xl) {
+    max-width: em(1200);
+  }
+}
