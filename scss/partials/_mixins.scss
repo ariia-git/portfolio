@@ -18,7 +18,7 @@
   }
 }
 @mixin mqh() {
-  @media (hover) {
+  @media (hover: hover) and (pointer: fine) {
     @content
   }
 }

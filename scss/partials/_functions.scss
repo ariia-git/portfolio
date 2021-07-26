@@ -14,5 +14,5 @@
 }
 // get colour value from $colours map
 @function c($name) {
-  @return map-get($colours, $name)
+    @return map-get($colours, $name)
 }

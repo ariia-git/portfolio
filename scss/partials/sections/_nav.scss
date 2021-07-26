@@ -6,7 +6,10 @@ nav {
     top: 0;
     min-height: 100%;
     width: em(150);
-    background: c(white);
+    background: lighten(c(grey-900), 1%);
+    color: darken(c(white), 9%);
+    font-weight: $fw-bold;
+
   }
 }
 
