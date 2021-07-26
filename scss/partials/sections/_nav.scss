@@ -1,0 +1,19 @@
+nav {
+  display: none;
+  @include mq(md) {
+    display: block;
+    position: fixed;
+    top: 0;
+    min-height: 100%;
+    width: em(150);
+    background: c(white);
+  }
+}
+
+main {
+  width: 100vw;
+  @include mq(md) {
+    width: calc(100vw - 150px);
+    margin-left: 150px;
+  }
+}
