@@ -10925,7 +10925,7 @@ body {
   background-position: center center;
   -webkit-background-size: cover;
   background-size: cover;
-  background-image: url("../img/header-bg.jpg");
+  background-image: url("/header-bg.238d3e41.jpg");
 }
 
 .overlay {
@@ -10954,7 +10954,7 @@ body {
 
 .card {
   color: #ffffff;
-  background: url("../img/card-bg.jpg");
+  background: url("/card-bg.01fdffb8.jpg");
   -webkit-background-size: cover;
   background-size: cover;
   padding: 10rem 0 0;
@@ -11034,4 +11034,7 @@ body {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+
+
+
+/*# sourceMappingURL=/styles.b61e60ae.css.map */

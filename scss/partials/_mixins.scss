@@ -17,11 +17,25 @@
     @warn 'Invalid breakpoint: #{$breakpoint}.';
   }
 }
+@mixin mqh() {
+  @media (hover) {
+    @content
+  }
+}
 
 // generate font utility classes from font stack sizes
 @each $font-size, $value in $type-scale {
   .text-#{$font-size} {
     font-size: $value;
+  }
+}
+@each $bp-name, $bp-value in $breakpoints {
+  @each $font-size, $value in $type-scale {
+    @include mq($bp-name) {
+      .#{$bp-name}\:text-#{$font-size} {
+        font-size: $value;
+      }
+    }
   }
 }
 

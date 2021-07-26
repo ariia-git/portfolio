@@ -5,10 +5,10 @@ $browser-context: 16;
 
 // map of breakpoint sizes
 $breakpoints: (
-        sm: 36em,
-        md: 48em,
-        lg: 62em,
-        xl: 78.75em,
+        sm: 36em, // 576px
+        md: 48em, // 768px
+        lg: 62em, // 992px
+        xl: 78.75em, // 1260px
 );
 
 // set font stack
@@ -17,7 +17,7 @@ $fw-base: 400;
 $fw-semibold: 600;
 $fw-bold: 800;
 
-// set font sizes
+// set font sizes - https://type-scale.com/?size=16&scale=1.333&text=A%20Visual%20Type%20Scale&font=Nunito%20Sans&fontweight=800&bodyfont=body_font_default&bodyfontweight=400&lineheight=1.75&backgroundcolor=%23ffffff&fontcolor=%23000000&preview=false
 $type-scale: (
         sm: 0.75rem,
         base: 1rem,
