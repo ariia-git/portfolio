@@ -113,6 +113,10 @@ video {
   font-size: 4.209rem;
 }
 
+.text-4xl {
+  font-size: 5.61rem;
+}
+
 @media screen and (min-width: 36em) {
   .sm\:text-sm {
     font-size: 0.75rem;
@@ -146,6 +150,11 @@ video {
 @media screen and (min-width: 36em) {
   .sm\:text-3xl {
     font-size: 4.209rem;
+  }
+}
+@media screen and (min-width: 36em) {
+  .sm\:text-4xl {
+    font-size: 5.61rem;
   }
 }
 @media screen and (min-width: 48em) {
@@ -183,6 +192,11 @@ video {
     font-size: 4.209rem;
   }
 }
+@media screen and (min-width: 48em) {
+  .md\:text-4xl {
+    font-size: 5.61rem;
+  }
+}
 @media screen and (min-width: 62em) {
   .lg\:text-sm {
     font-size: 0.75rem;
@@ -218,6 +232,11 @@ video {
     font-size: 4.209rem;
   }
 }
+@media screen and (min-width: 62em) {
+  .lg\:text-4xl {
+    font-size: 5.61rem;
+  }
+}
 @media screen and (min-width: 78.75em) {
   .xl\:text-sm {
     font-size: 0.75rem;
@@ -251,6 +270,11 @@ video {
 @media screen and (min-width: 78.75em) {
   .xl\:text-3xl {
     font-size: 4.209rem;
+  }
+}
+@media screen and (min-width: 78.75em) {
+  .xl\:text-4xl {
+    font-size: 5.61rem;
   }
 }
 .m-0 {
@@ -10354,6 +10378,7 @@ html {
 body {
   font-size: 1em;
   font-family: "Nunito Sans", sans-serif;
+  color: #ffffff;
 }
 
 h1, h2, h3, h4, h5 {
@@ -10909,11 +10934,6 @@ h1, h2, h3, h4, h5 {
   text-align: left;
 }
 
-.test {
-  color: #ffffff;
-  background: #000000;
-}
-
 body {
   background: #13171b;
 }
@@ -10927,6 +10947,10 @@ body {
   background-size: cover;
   background-image: url("../img/header-bg.jpg");
 }
+.header h1, .header p {
+  text-shadow: 5px 5px rgba(0, 0, 0, 0.35);
+  letter-spacing: 2px;
+}
 
 .overlay {
   position: absolute;
@@ -10937,11 +10961,10 @@ body {
   height: 100%;
   flex-direction: column;
   justify-content: center;
-  color: white;
 }
 
-.projects {
-  min-height: 100vh;
+.projects .heading {
+  color: #ffffff;
 }
 .projects .row {
   justify-content: flex-start;
@@ -10963,6 +10986,7 @@ body {
   border-radius: 0.5rem;
   overflow: hidden;
   transition: transform 500ms ease;
+  box-shadow: 0 4px 6px -1px rgba(90, 90, 90, 0.1), 0 2px 4px -1px rgba(90, 90, 90, 0.06);
 }
 .card:hover, .card:focus, .card:focus-within {
   transform: scale(1.05);
@@ -11039,15 +11063,91 @@ nav {
 }
 @media screen and (min-width: 48em) {
   nav {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 0;
     min-height: 100%;
-    width: 9.375em;
+    width: 200px;
     background: #151a1e;
-    color: #e8e8e8;
+    color: #d9d9d9;
+  }
+}
+@media screen and (min-width: 48em) and (min-width: 78.75em) {
+  nav {
+    width: 250px;
+  }
+}
+@media screen and (min-width: 48em) {
+  nav .logo {
+    justify-content: center;
+    align-items: center;
+    color: #008431;
+    border-bottom: 2px solid #008431;
     font-weight: 800;
   }
+}
+@media screen and (min-width: 48em) {
+  nav .menu-items > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 48em) {
+  nav a {
+    display: inline-block;
+    position: relative;
+  }
+  nav a.main-nav-item::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background: #42f584;
+    left: calc(1.5rem * -1);
+    bottom: 5px;
+    width: calc(100% + 1.5rem);
+    transform-origin: left;
+    transition: transform 500ms ease;
+    transform: scaleX(0);
+  }
+}
+@media screen and (min-width: 48em) and (min-width: 78.75em) {
+  nav a.main-nav-item::after {
+    height: 4px;
+  }
+}
+@media screen and (min-width: 48em) {
+  nav a:hover.main-nav-item::after {
+    transform: scaleX(1);
+  }
+}
+@media screen and (min-width: 48em) {
+  nav .bordered {
+    border-top: 2px solid #008431;
+    border-bottom: 2px solid #008431;
+  }
+}
+nav .socials .icon {
+  height: 1.5em;
+  width: 1.5em;
+  color: #cccccc;
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.21, -0.77, 0.85, 1.76);
+}
+@media screen and (min-width: 78.75em) {
+  nav .socials .icon {
+    height: 2em;
+    width: 2em;
+  }
+}
+nav .socials .icon:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+nav .socials ul {
+  display: flex;
+  justify-content: space-around;
 }
 
 main {
@@ -11055,9 +11155,64 @@ main {
 }
 @media screen and (min-width: 48em) {
   main {
-    width: calc(100vw - 150px);
-    margin-left: 150px;
+    width: calc(100vw - 200px);
+    margin-left: 200px;
   }
+}
+@media screen and (min-width: 78.75em) {
+  main {
+    width: calc(100vw - (200px * 1.25));
+    margin-left: 250px;
+  }
+}
+
+.contact {
+  min-height: 50vh;
+}
+.contact .custom-field {
+  position: relative;
+  font-size: 1rem;
+  border-top: 20px solid transparent;
+  padding: 12px;
+}
+.contact .custom-field input, .contact .custom-field textarea {
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 12px;
+  font-size: 1rem;
+  width: calc(100% - 24px);
+  outline: none;
+  color: #ffffff;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background: #333d48;
+  background: linear-gradient(90deg, #42f584, #42f584) center bottom/0 0.15em no-repeat, linear-gradient(90deg, #526475, #526475) left bottom/100% 0.15em no-repeat, linear-gradient(90deg, #333d48, #333d48) left bottom/100% no-repeat;
+  transition: background-size 0.3s ease-in;
+}
+.contact .custom-field input:valid + .placeholder, .contact .custom-field input:focus + .placeholder, .contact .custom-field input:not(:placeholder-shown) + .placeholder, .contact .custom-field textarea:valid + .placeholder, .contact .custom-field textarea:focus + .placeholder, .contact .custom-field textarea:not(:placeholder-shown) + .placeholder {
+  top: -10px;
+  font-size: 0.875rem;
+}
+.contact .custom-field input:valid, .contact .custom-field input:not(:placeholder-shown), .contact .custom-field input:focus, .contact .custom-field textarea:valid, .contact .custom-field textarea:not(:placeholder-shown), .contact .custom-field textarea:focus {
+  background-size: 100% 0.15em, 100% 0.1em, 100%;
+}
+.contact .custom-field .placeholder {
+  position: absolute;
+  left: 24px;
+  width: calc(100% - 24px);
+  top: 23px;
+  line-height: 100%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  color: #e6e6e6;
+  transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+}
+
+.message-label {
+  font-size: 0.875rem;
+  margin-left: 24px;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,61 @@
+.contact {
+  min-height: 50vh;
+
+  .custom-field {
+    position: relative;
+    font-size: 1rem;
+    border-top: 20px solid transparent;
+    padding: 12px;
+    input, textarea {
+      border: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      padding: 12px;
+      font-size: 1rem;
+      width: calc(100% - 24px);
+      outline: none;
+      color: c(white);
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      background: lighten(c(grey-900), 15%);
+      background:
+              linear-gradient(90deg, c(accent), c(accent)) center bottom/0 0.15em no-repeat,
+              linear-gradient(90deg, lighten(c(grey-900), 30%), lighten(c(grey-900), 30%)) left bottom/100% 0.15em no-repeat,
+              linear-gradient(90deg, lighten(c(grey-900), 15%), lighten(c(grey-900), 15%)) left bottom/100% no-repeat;
+      transition: background-size 0.3s ease-in;
+
+      &:valid + .placeholder,
+      &:focus + .placeholder,
+      &:not(:placeholder-shown) + .placeholder {
+        top: -10px;
+        font-size: 0.875rem;
+      }
+      &:valid,
+      &:not(:placeholder-shown),
+      //&:not(-ms-input-placeholder),
+      &:focus {
+        background-size: 100% 0.15em, 100% 0.1em, 100%;
+      }
+    }
+    .placeholder {
+      position: absolute;
+      left: 24px;
+      width: calc(100% - 24px);
+      top: 23px;
+      line-height: 100%;
+      transform: translateY(-50%);
+      overflow: hidden;
+      color: darken(c(white), 10%);
+      transition:
+              top 0.3s ease,
+              color 0.3s ease,
+              font-size 0.3s ease;
+    }
+
+  }
+}
+.message-label {
+  font-size: 0.875rem;
+  margin-left: 24px;
+}
