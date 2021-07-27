@@ -2,7 +2,6 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,8 +16,10 @@
   },
   "homepage": "https://github.com/scotthellings1/portfolio#readme",
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "@parcel/transformer-image": "^2.0.0-nightly.2400",
     "parcel-bundler": "^1.12.5",
-    "parcel-plugin-purgecss": "^3.0.0",
+    "postcss": "^8.3.6",
     "purify-css": "^1.2.5"
   }
 }
