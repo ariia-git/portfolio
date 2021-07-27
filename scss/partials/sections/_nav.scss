@@ -18,6 +18,7 @@ nav {
       color: c(primary);
       border-bottom: 2px solid c(primary);
       font-weight: $fw-bold;
+      font-family:$ff-logo;
     }
     .menu-items > ul {
       display: flex;

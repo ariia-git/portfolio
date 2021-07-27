@@ -2,6 +2,7 @@
  * Removes the default spacing and border for appropriate elements.
  */
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,800");
+@import url("https://fonts.googleapis.com/css2?family=Oregano:ital@1&display=swap");
 body,
 blockquote,
 dl,
@@ -10993,6 +10994,7 @@ nav {
     color: #008431;
     border-bottom: 2px solid #008431;
     font-weight: 800;
+    font-family: "Oregano", cursive;
   }
 }
 @media screen and (min-width: 48em) {
