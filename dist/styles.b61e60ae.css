@@ -30,6 +30,13 @@ fieldset {
   padding: 0;
 }
 
+textarea {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
+
 ol,
 ul {
   list-style: none;
@@ -10945,7 +10952,7 @@ body {
   background-position: center center;
   -webkit-background-size: cover;
   background-size: cover;
-  background-image: url("/186c94379fa129069a532f66238d3e41.jpg");
+  background-image: url("/header-bg.238d3e41.jpg");
 }
 .header h1, .header p {
   text-shadow: 5px 5px rgba(0, 0, 0, 0.35);
@@ -10977,7 +10984,7 @@ body {
 
 .card {
   color: #ffffff;
-  background: url("/0f70025838bb796307434f2b01fdffb8.jpg");
+  background: url("/card-bg.01fdffb8.jpg");
   -webkit-background-size: cover;
   background-size: cover;
   padding: 10rem 0 0;
@@ -11211,8 +11218,11 @@ main {
 }
 
 .message-label {
+  top: -208px;
   font-size: 0.875rem;
   margin-left: 24px;
+  position: absolute;
+  left: 0;
 }
 
 

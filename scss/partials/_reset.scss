@@ -30,7 +30,12 @@ fieldset {
   margin: 0;
   padding: 0;
 }
-
+textarea {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
 ol,
 ul {
   list-style: none;

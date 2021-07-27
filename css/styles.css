@@ -30,6 +30,13 @@ fieldset {
   padding: 0;
 }
 
+textarea {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
+
 ol,
 ul {
   list-style: none;
@@ -11211,8 +11218,11 @@ main {
 }
 
 .message-label {
+  top: -208px;
   font-size: 0.875rem;
   margin-left: 24px;
+  position: absolute;
+  left: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
