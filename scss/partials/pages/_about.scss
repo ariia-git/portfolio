@@ -1,1 +1,16 @@
 //about page styles
+.tech-icon {
+  height: em(50);
+  width: em(50);
+  color: c(grey-700);
+  background: c(grey-100);
+  padding: 0.75rem;
+
+}
+.about {
+  background: c(grey-700);
+  color: c(grey-100);
+  h1 {
+    color: c(white);
+  }
+}

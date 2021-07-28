@@ -9479,6 +9479,20 @@ main {
 .contact .button:hover, .contact .button:focus {
   background: #42f584;
 }
+.tech-icon {
+  height: 3.125em;
+  width: 3.125em;
+  color: #22252C;
+  background: #C0C1C1;
+  padding: 0.75rem;
+}
+.about {
+  background: #22252C;
+  color: #C0C1C1;
+}
+.about h1 {
+  color: #ffffff;
+}
 body {
   background: #13171b;
 }
