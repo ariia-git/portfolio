@@ -22,8 +22,9 @@ pre {
 }
 
 button {
-  background-color: transparent;
+  background-color: white;
   background-image: none;
+  border: none;
 }
 
 fieldset {
@@ -10393,6 +10394,27 @@ h1, h2, h3, h4, h5 {
   font-weight: 600;
 }
 
+a.link {
+  color: #42f584;
+  display: inline-block;
+  position: relative;
+}
+a.link::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: #42f584;
+  left: 0;
+  bottom: 1px;
+  width: 100%;
+  transform-origin: left;
+  transition: transform 250ms ease;
+  transform: scaleX(0);
+}
+a.link:hover::after {
+  transform: scaleX(1);
+}
+
 /* grid system */
 .row {
   display: flex;
@@ -10404,7 +10426,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .col-1 {
-  flex: 1 1 8.3333333333%;
+  flex: 0 0 8.3333333333%;
 }
 
 .col-offset-1 {
@@ -10412,7 +10434,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .col-2 {
-  flex: 1 1 16.6666666667%;
+  flex: 0 0 16.6666666667%;
 }
 
 .col-offset-2 {
@@ -10420,7 +10442,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .col-3 {
-  flex: 1 1 25%;
+  flex: 0 0 25%;
 }
 
 .col-offset-3 {
@@ -10428,7 +10450,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .col-4 {
-  flex: 1 1 33.3333333333%;
+  flex: 0 0 33.3333333333%;
 }
 
 .col-offset-4 {
@@ -10436,7 +10458,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .col-5 {
-  flex: 1 1 41.6666666667%;
+  flex: 0 0 41.6666666667%;
 }
 
 .col-offset-5 {
@@ -10444,7 +10466,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .col-6 {
-  flex: 1 1 50%;
+  flex: 0 0 50%;
 }
 
 .col-offset-6 {
@@ -10452,7 +10474,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .col-7 {
-  flex: 1 1 58.3333333333%;
+  flex: 0 0 58.3333333333%;
 }
 
 .col-offset-7 {
@@ -10460,7 +10482,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .col-8 {
-  flex: 1 1 66.6666666667%;
+  flex: 0 0 66.6666666667%;
 }
 
 .col-offset-8 {
@@ -10468,7 +10490,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .col-9 {
-  flex: 1 1 75%;
+  flex: 0 0 75%;
 }
 
 .col-offset-9 {
@@ -10476,7 +10498,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .col-10 {
-  flex: 1 1 83.3333333333%;
+  flex: 0 0 83.3333333333%;
 }
 
 .col-offset-10 {
@@ -10484,7 +10506,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .col-11 {
-  flex: 1 1 91.6666666667%;
+  flex: 0 0 91.6666666667%;
 }
 
 .col-offset-11 {
@@ -10492,7 +10514,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .col-12 {
-  flex: 1 1 100%;
+  flex: 0 0 100%;
 }
 
 .col-offset-12 {
@@ -10501,7 +10523,7 @@ h1, h2, h3, h4, h5 {
 
 @media screen and (min-width: 36em) {
   .sm\:col-1 {
-    flex: 1 1 8.3333333333%;
+    flex: 0 0 8.3333333333%;
   }
 
   .sm\:col-offset-1 {
@@ -10509,7 +10531,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .sm\:col-2 {
-    flex: 1 1 16.6666666667%;
+    flex: 0 0 16.6666666667%;
   }
 
   .sm\:col-offset-2 {
@@ -10517,7 +10539,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .sm\:col-3 {
-    flex: 1 1 25%;
+    flex: 0 0 25%;
   }
 
   .sm\:col-offset-3 {
@@ -10525,7 +10547,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .sm\:col-4 {
-    flex: 1 1 33.3333333333%;
+    flex: 0 0 33.3333333333%;
   }
 
   .sm\:col-offset-4 {
@@ -10533,7 +10555,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .sm\:col-5 {
-    flex: 1 1 41.6666666667%;
+    flex: 0 0 41.6666666667%;
   }
 
   .sm\:col-offset-5 {
@@ -10541,7 +10563,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .sm\:col-6 {
-    flex: 1 1 50%;
+    flex: 0 0 50%;
   }
 
   .sm\:col-offset-6 {
@@ -10549,7 +10571,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .sm\:col-7 {
-    flex: 1 1 58.3333333333%;
+    flex: 0 0 58.3333333333%;
   }
 
   .sm\:col-offset-7 {
@@ -10557,7 +10579,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .sm\:col-8 {
-    flex: 1 1 66.6666666667%;
+    flex: 0 0 66.6666666667%;
   }
 
   .sm\:col-offset-8 {
@@ -10565,7 +10587,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .sm\:col-9 {
-    flex: 1 1 75%;
+    flex: 0 0 75%;
   }
 
   .sm\:col-offset-9 {
@@ -10573,7 +10595,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .sm\:col-10 {
-    flex: 1 1 83.3333333333%;
+    flex: 0 0 83.3333333333%;
   }
 
   .sm\:col-offset-10 {
@@ -10581,7 +10603,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .sm\:col-11 {
-    flex: 1 1 91.6666666667%;
+    flex: 0 0 91.6666666667%;
   }
 
   .sm\:col-offset-11 {
@@ -10589,7 +10611,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .sm\:col-12 {
-    flex: 1 1 100%;
+    flex: 0 0 100%;
   }
 
   .sm\:col-offset-12 {
@@ -10598,7 +10620,7 @@ h1, h2, h3, h4, h5 {
 }
 @media screen and (min-width: 48em) {
   .md\:col-1 {
-    flex: 1 1 8.3333333333%;
+    flex: 0 0 8.3333333333%;
   }
 
   .md\:col-offset-1 {
@@ -10606,7 +10628,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .md\:col-2 {
-    flex: 1 1 16.6666666667%;
+    flex: 0 0 16.6666666667%;
   }
 
   .md\:col-offset-2 {
@@ -10614,7 +10636,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .md\:col-3 {
-    flex: 1 1 25%;
+    flex: 0 0 25%;
   }
 
   .md\:col-offset-3 {
@@ -10622,7 +10644,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .md\:col-4 {
-    flex: 1 1 33.3333333333%;
+    flex: 0 0 33.3333333333%;
   }
 
   .md\:col-offset-4 {
@@ -10630,7 +10652,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .md\:col-5 {
-    flex: 1 1 41.6666666667%;
+    flex: 0 0 41.6666666667%;
   }
 
   .md\:col-offset-5 {
@@ -10638,7 +10660,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .md\:col-6 {
-    flex: 1 1 50%;
+    flex: 0 0 50%;
   }
 
   .md\:col-offset-6 {
@@ -10646,7 +10668,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .md\:col-7 {
-    flex: 1 1 58.3333333333%;
+    flex: 0 0 58.3333333333%;
   }
 
   .md\:col-offset-7 {
@@ -10654,7 +10676,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .md\:col-8 {
-    flex: 1 1 66.6666666667%;
+    flex: 0 0 66.6666666667%;
   }
 
   .md\:col-offset-8 {
@@ -10662,7 +10684,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .md\:col-9 {
-    flex: 1 1 75%;
+    flex: 0 0 75%;
   }
 
   .md\:col-offset-9 {
@@ -10670,7 +10692,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .md\:col-10 {
-    flex: 1 1 83.3333333333%;
+    flex: 0 0 83.3333333333%;
   }
 
   .md\:col-offset-10 {
@@ -10678,7 +10700,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .md\:col-11 {
-    flex: 1 1 91.6666666667%;
+    flex: 0 0 91.6666666667%;
   }
 
   .md\:col-offset-11 {
@@ -10686,7 +10708,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .md\:col-12 {
-    flex: 1 1 100%;
+    flex: 0 0 100%;
   }
 
   .md\:col-offset-12 {
@@ -10695,7 +10717,7 @@ h1, h2, h3, h4, h5 {
 }
 @media screen and (min-width: 62em) {
   .lg\:col-1 {
-    flex: 1 1 8.3333333333%;
+    flex: 0 0 8.3333333333%;
   }
 
   .lg\:col-offset-1 {
@@ -10703,7 +10725,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .lg\:col-2 {
-    flex: 1 1 16.6666666667%;
+    flex: 0 0 16.6666666667%;
   }
 
   .lg\:col-offset-2 {
@@ -10711,7 +10733,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .lg\:col-3 {
-    flex: 1 1 25%;
+    flex: 0 0 25%;
   }
 
   .lg\:col-offset-3 {
@@ -10719,7 +10741,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .lg\:col-4 {
-    flex: 1 1 33.3333333333%;
+    flex: 0 0 33.3333333333%;
   }
 
   .lg\:col-offset-4 {
@@ -10727,7 +10749,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .lg\:col-5 {
-    flex: 1 1 41.6666666667%;
+    flex: 0 0 41.6666666667%;
   }
 
   .lg\:col-offset-5 {
@@ -10735,7 +10757,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .lg\:col-6 {
-    flex: 1 1 50%;
+    flex: 0 0 50%;
   }
 
   .lg\:col-offset-6 {
@@ -10743,7 +10765,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .lg\:col-7 {
-    flex: 1 1 58.3333333333%;
+    flex: 0 0 58.3333333333%;
   }
 
   .lg\:col-offset-7 {
@@ -10751,7 +10773,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .lg\:col-8 {
-    flex: 1 1 66.6666666667%;
+    flex: 0 0 66.6666666667%;
   }
 
   .lg\:col-offset-8 {
@@ -10759,7 +10781,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .lg\:col-9 {
-    flex: 1 1 75%;
+    flex: 0 0 75%;
   }
 
   .lg\:col-offset-9 {
@@ -10767,7 +10789,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .lg\:col-10 {
-    flex: 1 1 83.3333333333%;
+    flex: 0 0 83.3333333333%;
   }
 
   .lg\:col-offset-10 {
@@ -10775,7 +10797,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .lg\:col-11 {
-    flex: 1 1 91.6666666667%;
+    flex: 0 0 91.6666666667%;
   }
 
   .lg\:col-offset-11 {
@@ -10783,7 +10805,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .lg\:col-12 {
-    flex: 1 1 100%;
+    flex: 0 0 100%;
   }
 
   .lg\:col-offset-12 {
@@ -10792,7 +10814,7 @@ h1, h2, h3, h4, h5 {
 }
 @media screen and (min-width: 78.75em) {
   .xl\:col-1 {
-    flex: 1 1 8.3333333333%;
+    flex: 0 0 8.3333333333%;
   }
 
   .xl\:col-offset-1 {
@@ -10800,7 +10822,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .xl\:col-2 {
-    flex: 1 1 16.6666666667%;
+    flex: 0 0 16.6666666667%;
   }
 
   .xl\:col-offset-2 {
@@ -10808,7 +10830,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .xl\:col-3 {
-    flex: 1 1 25%;
+    flex: 0 0 25%;
   }
 
   .xl\:col-offset-3 {
@@ -10816,7 +10838,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .xl\:col-4 {
-    flex: 1 1 33.3333333333%;
+    flex: 0 0 33.3333333333%;
   }
 
   .xl\:col-offset-4 {
@@ -10824,7 +10846,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .xl\:col-5 {
-    flex: 1 1 41.6666666667%;
+    flex: 0 0 41.6666666667%;
   }
 
   .xl\:col-offset-5 {
@@ -10832,7 +10854,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .xl\:col-6 {
-    flex: 1 1 50%;
+    flex: 0 0 50%;
   }
 
   .xl\:col-offset-6 {
@@ -10840,7 +10862,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .xl\:col-7 {
-    flex: 1 1 58.3333333333%;
+    flex: 0 0 58.3333333333%;
   }
 
   .xl\:col-offset-7 {
@@ -10848,7 +10870,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .xl\:col-8 {
-    flex: 1 1 66.6666666667%;
+    flex: 0 0 66.6666666667%;
   }
 
   .xl\:col-offset-8 {
@@ -10856,7 +10878,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .xl\:col-9 {
-    flex: 1 1 75%;
+    flex: 0 0 75%;
   }
 
   .xl\:col-offset-9 {
@@ -10864,7 +10886,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .xl\:col-10 {
-    flex: 1 1 83.3333333333%;
+    flex: 0 0 83.3333333333%;
   }
 
   .xl\:col-offset-10 {
@@ -10872,7 +10894,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .xl\:col-11 {
-    flex: 1 1 91.6666666667%;
+    flex: 0 0 91.6666666667%;
   }
 
   .xl\:col-offset-11 {
@@ -10880,7 +10902,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .xl\:col-12 {
-    flex: 1 1 100%;
+    flex: 0 0 100%;
   }
 
   .xl\:col-offset-12 {
@@ -11172,7 +11194,11 @@ main {
 }
 
 .contact {
-  min-height: 50vh;
+  background: #22252C;
+  color: #C0C1C1;
+}
+.contact h2 {
+  color: #ffffff;
 }
 .contact .custom-field {
   position: relative;
@@ -11214,13 +11240,22 @@ main {
   color: #e6e6e6;
   transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
 }
-
-.message-label {
+.contact .message-label {
   top: -208px;
   font-size: 0.875rem;
   margin-left: 24px;
   position: absolute;
   left: 0;
+}
+.contact .button {
+  background: #008431;
+  color: #22252C;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.contact .button:hover, .contact .button:focus {
+  background: #42f584;
 }
 
 body {

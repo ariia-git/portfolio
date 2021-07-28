@@ -15,7 +15,7 @@
   .col-#{$i} {
     // set flex shrink and grow to 0 and dynamically set flex basis to
     // 100% / (number of columns / iteration)
-    flex: 1 1 math.div(100%, math.div($grid-columns, $i));
+    flex: 0 0 math.div(100%, math.div($grid-columns, $i));
   }
   //create column offsets
   .col-offset-#{$i} {
@@ -27,7 +27,7 @@
     .sm\:col-#{$i} {
       // set flex shrink and grow to 0 and dynamically set flex basis to
       // 100% / (number of columns / iteration)
-      flex: 1 1 math.div(100%, math.div($grid-columns, $i));
+      flex: 0 0 math.div(100%, math.div($grid-columns, $i));
     }
     //create column offsets
     .sm\:col-offset-#{$i} {
@@ -40,7 +40,7 @@
       .md\:col-#{$i} {
         // set flex shrink and grow to 0 and dynamically set flex basis to
         // 100% / (number of columns / iteration)
-        flex: 1 1 math.div(100%, math.div($grid-columns, $i));
+        flex: 0 0 math.div(100%, math.div($grid-columns, $i));
       }
       //create column offsets
       .md\:col-offset-#{$i} {
@@ -54,7 +54,7 @@
       .lg\:col-#{$i} {
         // set flex shrink and grow to 0 and dynamically set flex basis to
         // 100% / (number of columns / iteration)
-        flex: 1 1 math.div(100%, math.div($grid-columns, $i));
+        flex: 0 0 math.div(100%, math.div($grid-columns, $i));
       }
       //create column offsets
       .lg\:col-offset-#{$i} {
@@ -67,7 +67,7 @@
       .xl\:col-#{$i} {
         // set flex shrink and grow to 0 and dynamically set flex basis to
         // 100% / (number of columns / iteration)
-        flex: 1 1 math.div(100%, math.div($grid-columns, $i));
+        flex: 0 0 math.div(100%, math.div($grid-columns, $i));
       }
       //create column offsets
       .xl\:col-offset-#{$i} {

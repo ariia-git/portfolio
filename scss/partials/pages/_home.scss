@@ -111,13 +111,19 @@
 // Contact form styling
 
 .contact {
-  min-height: 50vh;
+
+  background: c(grey-700);
+  color: c(grey-100);
+  h2{
+    color: c(white);
+  }
 
   .custom-field {
     position: relative;
     font-size: 1rem;
     border-top: 20px solid transparent;
     padding: 12px;
+
     input, textarea {
       border: none;
       -webkit-appearance: none;
@@ -131,10 +137,9 @@
       border-top-left-radius: 4px;
       border-top-right-radius: 4px;
       background: lighten(c(grey-900), 15%);
-      background:
-              linear-gradient(90deg, c(accent), c(accent)) left bottom/0 0.15em no-repeat,
-              linear-gradient(90deg, lighten(c(grey-900), 30%), lighten(c(grey-900), 30%)) left bottom/100% 0.15em no-repeat,
-              linear-gradient(90deg, lighten(c(grey-900), 15%), lighten(c(grey-900), 15%)) left bottom/100% no-repeat;
+      background: linear-gradient(90deg, c(accent), c(accent)) left bottom/0 0.15em no-repeat,
+      linear-gradient(90deg, lighten(c(grey-900), 30%), lighten(c(grey-900), 30%)) left bottom/100% 0.15em no-repeat,
+      linear-gradient(90deg, lighten(c(grey-900), 15%), lighten(c(grey-900), 15%)) left bottom/100% no-repeat;
       transition: background-size 0.25s ease-in;
 
       &:valid + .placeholder,
@@ -143,6 +148,7 @@
         top: -10px;
         font-size: 0.875rem;
       }
+
       &:valid,
       &:not(:placeholder-shown),
         //&:not(-ms-input-placeholder),
@@ -150,6 +156,7 @@
         background-size: 100% 0.15em, 100% 0.1em, 100%;
       }
     }
+
     .placeholder {
       position: absolute;
       left: 24px;
@@ -159,18 +166,31 @@
       transform: translateY(-50%);
       overflow: hidden;
       color: darken(c(white), 10%);
-      transition:
-              top 0.3s ease,
-              color 0.3s ease,
-              font-size 0.3s ease;
+      transition: top 0.3s ease,
+      color 0.3s ease,
+      font-size 0.3s ease;
     }
 
   }
-}
-.message-label {
-  top: -208px;
-  font-size: 0.875rem;
-  margin-left: 24px;
-  position: absolute;
-  left: 0;
+
+  .message-label {
+    top: -208px;
+    font-size: 0.875rem;
+    margin-left: 24px;
+    position: absolute;
+    left: 0;
+  }
+
+  .button {
+    background: c(primary);
+    color: c(grey-700);
+    font-weight: $fw-semibold;
+    border-radius: 0.25rem;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      background: c(accent);
+
+    }
+  }
 }
