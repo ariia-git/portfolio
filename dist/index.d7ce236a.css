@@ -9196,6 +9196,11 @@ a.link:hover::after {
 .text-left {
   text-align: left;
 }
+.border-accent {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom: 0.15em solid #42f584;
+}
 .header {
   position: relative;
   height: 100vh;
@@ -9513,7 +9518,6 @@ main {
 .about .content {
   flex-direction: column;
   background: #333d48;
-  border-radius: 5px;
 }
 .about h1 {
   color: #ffffff;
@@ -9561,6 +9565,20 @@ main {
   max-height: 15em;
   margin-left: auto;
   margin-right: auto;
+}
+.scs {
+  width: 50%;
+}
+.scs-card {
+  background: #333d48;
+  color: #c0c1c1;
+  flex-grow: 1;
+}
+.scs-card:nth-child(2) {
+  background: #22252c;
+}
+.scs-card h2 {
+  margin: 1em 0;
 }
 body {
   background: #13171b;

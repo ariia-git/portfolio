@@ -52,3 +52,9 @@
 .text-left {
   text-align: left;
 }
+
+.border-accent {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom: 0.15em solid c(accent);
+}

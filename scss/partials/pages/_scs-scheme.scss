@@ -1,1 +1,15 @@
 //scs-scheme page styles
+.scs {
+  width: 50%;
+}
+.scs-card {
+  background: c(grey-500);
+  color: c(grey-100);
+  flex-grow: 1;
+  &:nth-child(2) {
+    background: c(grey-700);
+  }
+  h2 {
+    margin: 1em 0;
+  }
+}
