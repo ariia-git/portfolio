@@ -1,4 +1,3 @@
-
 .header {
   position: relative;
   height: 100vh;
@@ -7,19 +6,24 @@
   -webkit-background-size: cover;
   background-size: cover;
   background-image: url("../img/header-bg.jpg");
-  h1, p {
+  h1,
+  p {
     text-shadow: 5px 5px rgba(0, 0, 0, 0.35);
     letter-spacing: 2px;
   }
 }
-.overlay { // add a gradient overlay to increase contrast between text and bg image
+.overlay {
+  // add a gradient overlay to increase contrast between text and bg image
   position: absolute;
-  background-image:  linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.4)
+  );
   & .content {
     display: flex;
     height: 100%;
     flex-direction: column;
     justify-content: center;
-
   }
 }

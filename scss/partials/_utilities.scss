@@ -8,16 +8,20 @@
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  @include mq(sm) { // set a max width for sm bp
+  @include mq(sm) {
+    // set a max width for sm bp
     max-width: 34em;
   }
-  @include mq(md) { // set a max width for md bp
+  @include mq(md) {
+    // set a max width for md bp
     max-width: em(750);
   }
-  @include mq(lg) { // set a max width for lg bp
+  @include mq(lg) {
+    // set a max width for lg bp
     max-width: em(970);
   }
-  @include mq(xl) { // set a max width for xl bp
+  @include mq(xl) {
+    // set a max width for xl bp
     max-width: em(1200);
   }
 }

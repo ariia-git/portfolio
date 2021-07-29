@@ -1,16 +1,9 @@
 // import base styles
-@import
-  "partials/reset",
-  "partials/variables",
-  "partials/functions",
-  "partials/mixins",
-  "partials/colors",
-  "partials/typography",
-  "partials/grid",
+@import "partials/reset", "partials/variables", "partials/functions",
+  "partials/mixins", "partials/colors", "partials/typography", "partials/grid",
   "partials/utilities";
 
 //import styles for sections
 @import "partials/sections/all";
 // import styles for pages
 @import "partials/pages/all";
-
